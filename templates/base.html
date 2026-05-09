@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>K-Means Clustering con Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+
+            <div class="header-top">
+                <img src="{{ url_for('static', filename='img/udec.png') }}" 
+                     alt="Logo Universidad" 
+                     class="logo-universidad">
+
+                <div>
+                    <h1>Implementación de K-Means Clustering con Flask</h1>
+                    <p class="subtitle">Minería de Datos</p>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <a href="/">Inicio</a>
+                <a href="/dataset">Dataset</a>
+                <a href="/kmeans">K-Means</a>
+                <a href="/resultados?k=3">Resultados</a>
+                <a href="/interpretacion">Interpretación</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p><strong>Minería de Datos</strong></p>
+        <p>Integrantes: Jhojan Smith Sanchez - Juan Diego Perez</p>
+        <p>Actividad académica - K-Means Clustering con Flask</p>
+    </footer>
+
+</body>
+</html>

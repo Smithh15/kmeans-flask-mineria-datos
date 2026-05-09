@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #1f2937, #374151);
+    color: white;
+    padding: 35px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.header-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.logo-universidad {
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    border-radius: 14px;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.title-block {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dbeafe;
+    margin-top: 8px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.14);
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.card {
+    background-color: white;
+    padding: 28px;
+    margin-bottom: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: #111827;
+    font-size: 26px;
+    margin-bottom: 15px;
+    border-left: 5px solid #2563eb;
+    padding-left: 12px;
+}
+
+.card h3 {
+    color: #1f2937;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 14px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+ul,
+ol {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.table th {
+    background-color: #1f2937;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+}
+
+.table td {
+    border: 1px solid #d1d5db;
+    padding: 9px;
+    text-align: center;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+.table tr:hover {
+    background-color: #e5e7eb;
+}
+
+.grafica {
+    width: 100%;
+    max-width: 850px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #f9fafb;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input {
+    padding: 10px;
+    width: 90px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.formulario button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    background-color: #1d4ed8;
+}
+
+.footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #1f2937;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .logo-universidad {
+        width: 105px;
+        height: 80px;
+    }
+
+    .navbar a {
+        padding: 9px 14px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+}

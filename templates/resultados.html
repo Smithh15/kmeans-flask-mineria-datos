@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="card">
+    <h2>Resultados del modelo K-Means</h2>
+
+    <p>
+        El modelo fue ejecutado utilizando <strong>K = {{ k }}</strong> clústeres.
+        A continuación se presentan las visualizaciones y tablas generadas por la aplicación.
+    </p>
+</section>
+
+<section class="card">
+    <h2>Gráfica del método del codo</h2>
+
+    <p>
+        El método del codo permite analizar la inercia del modelo para diferentes
+        valores de K. La inercia representa la suma de las distancias internas entre
+        los datos y sus centroides. Cuando la reducción de la inercia empieza a ser
+        menor, se identifica un posible valor adecuado de K.
+    </p>
+
+    <img src="{{ url_for('static', filename='img/metodo_codo.png') }}?v={{ version }}" 
+         alt="Método del codo" class="grafica">
+</section>
+
+<section class="card">
+    <h2>Visualización de clústeres y centroides</h2>
+
+    <p>
+        La siguiente gráfica muestra los clientes agrupados según su ingreso mensual
+        y el monto de crédito solicitado. Los centroides se muestran con una marca
+        en forma de X.
+    </p>
+
+    <img src="{{ url_for('static', filename='img/clusters.png') }}?v={{ version }}" 
+         alt="Gráfica de clústeres" class="grafica">
+</section>
+
+<section class="card">
+    <h2>Centroides del modelo</h2>
+
+    <p>
+        Los centroides representan el punto promedio de cada clúster. Estos valores
+        permiten interpretar las características generales de cada grupo de clientes.
+    </p>
+
+    <div class="table-container">
+        {{ tabla_centroides | safe }}
+    </div>
+</section>
+
+<section class="card">
+    <h2>Resumen promedio por clúster</h2>
+
+    <p>
+        Esta tabla permite comparar los promedios de edad, ingresos, monto de crédito,
+        puntaje crediticio, antigüedad laboral y cuota mensual para cada grupo.
+    </p>
+
+    <div class="table-container">
+        {{ tabla_resumen | safe }}
+    </div>
+</section>
+
+<section class="card">
+    <h2>Tabla de datos procesados</h2>
+
+    <p>
+        A continuación se muestran los primeros 30 registros del dataset con la etiqueta
+        del clúster asignado por el modelo.
+    </p>
+
+    <div class="table-container">
+        {{ tabla_resultados | safe }}
+    </div>
+</section>
+
+{% endblock %}

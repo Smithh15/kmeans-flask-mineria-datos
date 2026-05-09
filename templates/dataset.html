@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="card">
+    <h2>Descripción del dataset</h2>
+
+    <p>
+        El dataset utilizado en este proyecto fue construido con fines académicos
+        y representa información de clientes interesados en solicitar un crédito
+        de vivienda. El objetivo es agrupar clientes con características similares
+        mediante el algoritmo K-Means Clustering.
+    </p>
+
+    <h3>Información general</h3>
+
+    <ul>
+        <li><strong>Nombre del archivo:</strong> clientes_credito.csv</li>
+        <li><strong>Número de registros:</strong> {{ total_registros }}</li>
+        <li><strong>Número de variables:</strong> {{ total_columnas }}</li>
+        <li><strong>Fuente:</strong> Dataset construido para fines académicos</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Variables del dataset</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Variable</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id_cliente</td>
+                <td>Identificador único de cada cliente.</td>
+            </tr>
+            <tr>
+                <td>edad</td>
+                <td>Edad del cliente en años.</td>
+            </tr>
+            <tr>
+                <td>ingreso_mensual</td>
+                <td>Ingresos mensuales aproximados del cliente en pesos colombianos.</td>
+            </tr>
+            <tr>
+                <td>monto_credito</td>
+                <td>Monto del crédito de vivienda solicitado por el cliente.</td>
+            </tr>
+            <tr>
+                <td>puntaje_crediticio</td>
+                <td>Puntaje que representa el comportamiento financiero del cliente.</td>
+            </tr>
+            <tr>
+                <td>antiguedad_laboral</td>
+                <td>Años de estabilidad laboral del cliente.</td>
+            </tr>
+            <tr>
+                <td>cuota_mensual</td>
+                <td>Valor mensual estimado que pagaría el cliente por el crédito.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="card">
+    <h2>Vista previa de los datos</h2>
+
+    <p>
+        A continuación se muestran los primeros 20 registros del dataset cargado
+        en la aplicación.
+    </p>
+
+    <div class="table-container">
+        {{ tabla_datos | safe }}
+    </div>
+</section>
+
+<section class="card">
+    <h2>Estadísticas descriptivas</h2>
+
+    <p>
+        Estas estadísticas permiten observar valores mínimos, máximos, promedios
+        y desviaciones estándar de las variables numéricas.
+    </p>
+
+    <div class="table-container">
+        {{ estadisticas | safe }}
+    </div>
+</section>
+
+{% endblock %}
