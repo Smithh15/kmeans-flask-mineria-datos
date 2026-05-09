@@ -15,61 +15,6 @@
 <section class="card">
     <h2>Interpretación de los clústeres</h2>
 
-    <h3>Clúster 0</h3>
-    <p>
-        Este grupo puede representar clientes con características financieras más bajas
-        en comparación con los demás grupos. Generalmente presentan menores ingresos,
-        montos de crédito más reducidos y cuotas mensuales más bajas.
-    </p>
-
-    <h3>Clúster 1</h3>
-    <p>
-        Este grupo puede representar clientes con condiciones financieras intermedias.
-        Sus ingresos, puntaje crediticio y monto de crédito solicitado se encuentran
-        en un nivel medio, por lo que pueden considerarse perfiles moderados.
-    </p>
-
-    <h3>Clúster 2</h3>
-    <p>
-        Este grupo puede representar clientes con mayor capacidad económica. Usualmente
-        presentan ingresos más altos, mejores puntajes crediticios, mayor antigüedad
-        laboral y montos de crédito más elevados.
-    </p>
-</section>
-
-<section class="card">
-    <h2>Patrones identificados</h2>
-
-    <ul>
-        <li>
-            Los clientes con mayores ingresos tienden a solicitar montos de crédito más altos.
-        </li>
-        <li>
-            Los clientes con mejor puntaje crediticio se agrupan en perfiles de mayor estabilidad financiera.
-        </li>
-        <li>
-            La cuota mensual está relacionada directamente con el monto del crédito solicitado.
-        </li>
-        <li>
-            La segmentación permite diferenciar perfiles de clientes de bajo, medio y alto nivel financiero.
-        </li>
-    </ul>
-</section>
-
-<section class="card">
-    <h2>Justificación del número de clústeres</h2>
-
-    <p>
-        Para este ejercicio se seleccionó K = 3, debido a que el análisis del método
-        del codo permite observar un punto donde la reducción de la inercia empieza
-        a estabilizarse. Además, desde el contexto del problema, tres grupos permiten
-        interpretar adecuadamente los perfiles de clientes: bajo, medio y alto.
-    </p>
-</section>
-
-<section class="card">
-    <h2>Interpretación de los clústeres</h2>
-
     <h3>Clúster 0: Perfil financiero bajo</h3>
     <p>
         Este grupo representa clientes con ingresos mensuales más bajos, montos de crédito
@@ -91,6 +36,51 @@
         puntaje crediticio, cuota mensual y monto de crédito solicitado se encuentran entre
         los valores del clúster bajo y el clúster alto. Pueden considerarse clientes con
         capacidad moderada para acceder a créditos de vivienda.
+    </p>
+</section>
+
+<section class="card">
+    <h2>Patrones identificados</h2>
+
+    <ul>
+        <li>Los clientes con mayores ingresos tienden a solicitar montos de crédito más altos.</li>
+        <li>Los clientes con mejor puntaje crediticio se agrupan en perfiles de mayor estabilidad financiera.</li>
+        <li>La cuota mensual está relacionada directamente con el monto del crédito solicitado.</li>
+        <li>La segmentación permite diferenciar perfiles de clientes de bajo, medio y alto nivel financiero.</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Justificación del número de clústeres</h2>
+
+    <p>
+        Para este ejercicio se seleccionó K = 3, debido a que el análisis del método
+        del codo permite observar un punto donde la reducción de la inercia empieza
+        a estabilizarse. Además, desde el contexto del problema, tres grupos permiten
+        interpretar adecuadamente los perfiles de clientes: bajo, medio y alto.
+    </p>
+</section>
+
+<section class="card">
+    <h2>Conclusiones</h2>
+
+    <p>
+        El algoritmo K-Means permitió segmentar clientes de crédito de vivienda en
+        grupos con características similares. Esta segmentación puede apoyar procesos
+        de análisis financiero, clasificación de perfiles y toma de decisiones en
+        entidades bancarias o áreas comerciales.
+    </p>
+
+    <p>
+        La normalización de los datos fue necesaria porque las variables utilizadas
+        tenían escalas diferentes. Sin este proceso, variables como ingreso mensual
+        o monto de crédito podrían dominar el cálculo de distancias del algoritmo.
+    </p>
+
+    <p>
+        El desarrollo de la aplicación en Flask permitió integrar el análisis de datos,
+        la ejecución del modelo, la visualización de clústeres, los centroides y la
+        interpretación de resultados en una interfaz web funcional.
     </p>
 </section>
 
